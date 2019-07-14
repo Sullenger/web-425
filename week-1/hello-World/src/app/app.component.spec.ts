@@ -1,3 +1,12 @@
+/*
+============================================
+; Title: Exercise 1.3
+; Author: Professor Krasso
+; Date: 10 July 2019
+; Modified By: Jason Sullenger
+; Description: Hello World using CLI
+;===========================================
+*/
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
