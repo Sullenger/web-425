@@ -1,3 +1,13 @@
+/*
+============================================
+; Title: Exercise 2.3
+; Author: Professor Krasso
+; Date: 15 July 2019
+; Modified By: Jason Sullenger
+; Description: Angular two way binding
+;===========================================
+*/
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
