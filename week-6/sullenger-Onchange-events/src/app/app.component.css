@@ -1,0 +1,27 @@
+ .sideNav {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 89.5vh;
+  background-color: darkgrey;
+}
+
+.menu{
+  border-radius: 5px;
+}
+
+.inputStyle {
+  width: 70%;
+  height: 300px;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+}
+
+.inputMargin {
+  margin: 5px 50px;
+}
+
+.parentHeader {
+  margin-left: 50px;
+}
