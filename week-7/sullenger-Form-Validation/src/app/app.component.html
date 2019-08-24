@@ -1,0 +1,110 @@
+<!-- Navbar -->
+<mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="toolbar__icon-button mat-button">
+      <mat-icon>web</mat-icon>
+      <span style="margin-left: 5px !important">Template-driven Forms</span>
+    </button>
+    <button mat-button [routerLink]="['/']" class="mat-button">
+      Home
+    </button>
+
+    <div fxFlex></div>
+
+    <button
+      mat-icon-button
+      class="toolbar__icon-button"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>perm_contact_calendar</mat-icon>
+        <span>My Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- sideNav -->
+<div class="mainBody">
+  <div class="sideNav" fxFlex="20%">
+    <mat-sidenav-container *ngIf="shouldRun">
+      <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+      <mat-sidenav-content>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <div *ngIf="!shouldRun">
+      <button
+        style="width: 100%;"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/']"
+        class="mat-button"
+      >
+        Home
+      </button>
+      <button
+        style="width: 100%;"
+        mat-raised-button
+        [routerLink]="['/']"
+        class="mat-button"
+      >
+        Secondary Nav link
+      </button>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <div class="parent" fxFlex="80%">
+    <form #f="ngForm" class="inputStyle" (ngSubmit)="onSubmit(f.value)">
+      <mat-form-field>
+        Phone number:
+        <input
+          type="text"
+          name="telephone"
+          ngModel
+          matInput
+          required
+          pattern="[0-9]*"
+          minlength="10"
+          #phone="ngModel"
+          [class.hasError]="phone.isvalid && phone.touched"
+        />
+      </mat-form-field>
+
+      <div [hidden]="phone.isvalid || phone.pristine">
+        <div class="error" [hidden]="!phone.hasError('minlength')">
+          Minimum of 10 digits
+        </div>
+        <div class="error" [hidden]="!phone.hasError('required')">
+          Phone number required
+        </div>
+        <div class="error" [hidden]="!phone.hasError('pattern')">
+          Only numbers are allowed
+        </div>
+      </div>
+      <br><br>
+      <button
+        mat-raised-button
+        class="buttonStyle"
+        color="accent"
+        type="submit"
+        [disabled]="f.invalid"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

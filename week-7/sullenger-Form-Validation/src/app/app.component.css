@@ -1,0 +1,41 @@
+.error {
+  color: red;
+}
+
+.hasError {
+  border: 1px solid red;
+}
+
+.sideNav {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 89.5vh;
+  background-color: darkgrey;
+}
+
+.menu{
+  border-radius: 5px;
+}
+
+.parent{
+  margin-top: 40px;
+}
+
+.inputStyle {
+  width: 40%;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  margin: 5px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.passStyle {
+width: 100%;
+}
+
+.buttonStyle {
+  width: 20%;
+  margin: 10px auto;
+}
