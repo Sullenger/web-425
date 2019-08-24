@@ -1,0 +1,94 @@
+<!-- Navbar -->
+<mat-toolbar class="menu" role="header" color="primary">
+  <mat-toolbar-row>
+    <button mat-button class="toolbar__icon-button mat-button">
+      <mat-icon>web</mat-icon>
+      <span style="margin-left: 5px !important">Template-driven Forms</span>
+    </button>
+    <button mat-button [routerLink]="['/']" class="mat-button">
+      Home
+    </button>
+
+    <div fxFlex></div>
+
+    <button
+      mat-icon-button
+      class="toolbar__icon-button"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>perm_contact_calendar</mat-icon>
+        <span>My Profile</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>settings</mat-icon>
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- sideNav -->
+<div class="mainBody">
+  <div class="sideNav" fxFlex="20%">
+    <mat-sidenav-container *ngIf="shouldRun">
+      <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+      <mat-sidenav-content>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <div *ngIf="!shouldRun">
+      <button
+        style="width: 100%;"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/']"
+        class="mat-button"
+      >
+        Home
+      </button>
+      <button
+        style="width: 100%;"
+        mat-raised-button
+        [routerLink]="['/']"
+        class="mat-button"
+      >
+        Secondary Nav link
+      </button>
+    </div>
+  </div>
+
+  <!-- login form -->
+  <div class="parent" fxFlex="80%">
+    <form #f="ngForm" class="inputStyle" (ngSubmit)="onSubmit(f.value)">
+      <mat-form-field>
+        Username:
+        <input type="text" matInput name="username" ngModel />
+      </mat-form-field>
+      <mat-form-field >
+        SSN:
+        <input type="text" matInput name="ssn" ngModel />
+      </mat-form-field>
+      <div ngModelGroup="passwordsGroup">
+        <mat-form-field class="passStyle">
+          Password:
+          <input type="password" matInput name="password" ngModel />
+        </mat-form-field>
+        <mat-form-field class="passStyle">
+          Confirm password:
+          <input type="password" matInput name="passConfirm" ngModel />
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="accent" type="submit" class="buttonStyle">Submit</button>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
