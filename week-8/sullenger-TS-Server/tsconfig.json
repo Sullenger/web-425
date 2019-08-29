@@ -1,0 +1,11 @@
+{
+"compilerOptions": {
+  "module": "commonjs",
+  "outDir": "build",
+  "target": "es6",
+  "experimentalDecorators": true
+},
+"exclude": [
+  "node_modules"
+]
+}
