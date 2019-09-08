@@ -1,11 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { OrderComponent } from './order/order.component';
-import { InvoiceComponent } from './invoice/invoice.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { OrderComponent } from "./order/order.component";
+import { HomeComponent } from "./home/home.component";
+import { InvoiceComponent } from "./invoice/invoice.component";
+
 import {
   MatButtonModule,
   MatIconModule,
@@ -15,33 +16,36 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatMenuModule,
+  MatCheckboxModule,
 } from "@angular/material";
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-
+import { FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { CommonModule } from "@angular/common";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    OrderComponent,
-    InvoiceComponent
-  ],
+  declarations: [AppComponent, OrderComponent, HomeComponent, InvoiceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     MatButtonModule,
+    BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
     MatToolbarModule,
-    BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    FormsModule,
+    FlexLayoutModule,
+    CommonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InvoiceComponent]
 })
-export class AppModule { }
+export class AppModule {}

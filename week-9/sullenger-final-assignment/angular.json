@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sullenger-final-assignment": {
+    "sullenger-Final-Assignment": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sullenger-final-assignment",
+            "outputPath": "dist/sullenger-Final-Assignment",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -62,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sullenger-final-assignment:build"
+            "browserTarget": "sullenger-Final-Assignment:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sullenger-final-assignment:build:production"
+              "browserTarget": "sullenger-Final-Assignment:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sullenger-final-assignment:build"
+            "browserTarget": "sullenger-Final-Assignment:build"
           }
         },
         "test": {
@@ -88,7 +84,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -110,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sullenger-final-assignment:serve"
+            "devServerTarget": "sullenger-Final-Assignment:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sullenger-final-assignment:serve:production"
+              "devServerTarget": "sullenger-Final-Assignment:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "sullenger-final-assignment"
+  "defaultProject": "sullenger-Final-Assignment"
 }
