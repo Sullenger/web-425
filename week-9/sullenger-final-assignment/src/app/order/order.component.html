@@ -1,7 +1,7 @@
 <mat-card-title class="form-title"></mat-card-title>
 <div class="container">
   <mat-card class="form">
-    <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.reset()">
       <mat-card-content>
         <h2>Order Form</h2>
 
@@ -103,7 +103,7 @@
             <input
               type="text"
               matInput
-              name="addParts"
+              name="parts"
               placeholder="Additional parts"
               ngModel
             />

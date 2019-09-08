@@ -1,20 +1,12 @@
 <app-home>
-
-<!-- Navbar -->
-<mat-toolbar class="menu" role="header" color="primary">
+  <!-- Navbar -->
+  <mat-toolbar class="menu" role="header" color="primary">
     <mat-toolbar-row>
       <button mat-button class="toolbar__icon-button mat-button">
         <mat-icon>computer</mat-icon>
         <span style="margin-left: 5px !important" [routerLink]="['/']"
           >Bob's Computer Repair Shop</span
         >
-      </button>
-      <button mat-button [routerLink]="['/']" class="mat-button">
-        Home
-      </button>
-
-      <button mat-button [routerLink]="['order']" class="mat-button">
-        Order
       </button>
 
       <div fxFlex></div>
@@ -42,10 +34,9 @@
       </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>
-<!-- endNavbar -->
+  <!-- endNavbar -->
 
   <app-order></app-order>
-
 </app-home>
 
 <router-outlet></router-outlet>

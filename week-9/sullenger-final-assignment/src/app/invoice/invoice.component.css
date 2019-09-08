@@ -1,0 +1,16 @@
+.container {
+  margin: 20px;
+}
+
+.invoiceStyle > h4 {
+  margin-left: 40px;
+}
+
+.invoiceStyle > p {
+  margin-left: 80px;
+}
+
+button {
+  position: absolute;
+  bottom: 7.5%;
+}

@@ -16,7 +16,7 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatMenuModule,
-  MatCheckboxModule,
+  MatCheckboxModule
 } from "@angular/material";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";

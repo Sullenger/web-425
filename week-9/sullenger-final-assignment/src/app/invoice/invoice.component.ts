@@ -1,19 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatDialogRef} from '@angular/material';
-import { OrderComponent} from '../order/order.component'
+import { Component, OnInit, Input } from "@angular/core";
+import { MatDialogRef } from "@angular/material";
+import { OrderComponent } from "../order/order.component";
 
 @Component({
-  selector: 'app-invoice',
-  templateUrl: './invoice.component.html',
-  styleUrls: ['./invoice.component.css']
+  selector: "app-invoice",
+  templateUrl: "./invoice.component.html",
+  styleUrls: ["./invoice.component.css"]
 })
 export class InvoiceComponent implements OnInit {
-
   @Input() passwordOrder: boolean;
   @Input() passwordPrice: number;
   @Input() public order;
 
-  constructor(private dialogRef: MatDialogRef<OrderComponent>) { }
+  constructor(private dialogRef: MatDialogRef<OrderComponent>) {}
 
   ngOnInit() {
     console.log(this.order);
@@ -21,6 +20,5 @@ export class InvoiceComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
-};
-
+  }
 }

@@ -1,3 +1,13 @@
+/*
+============================================
+; Title: Bob's Computer Repair Shop
+; Author: Professor Krasso
+; Date: 08 September 2019
+; Modified By: Jason Sullenger
+; Description: Order form with invoice pop-up for Bob assignment
+;===========================================
+*/
+
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
