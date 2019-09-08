@@ -1,3 +1,13 @@
+/*
+============================================
+; Title: Bob's Computer Repair Shop
+; Author: Professor Krasso
+; Date: 08 September 2019
+; Modified By: Jason Sullenger
+; Description: Order form with invoice pop-up for Bob assignment
+;===========================================
+*/
+
 import { Component, OnInit, Input } from "@angular/core";
 import { MatDialogRef } from "@angular/material";
 import { OrderComponent } from "../order/order.component";
@@ -20,5 +30,6 @@ export class InvoiceComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
+    location.reload();
   }
 }
